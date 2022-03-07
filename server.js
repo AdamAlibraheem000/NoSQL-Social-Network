@@ -16,4 +16,6 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost:27017/NoSQL-Soc
 // Use this to log mongo queries being executed
 mongoose.set('debug', true);
 
+app.use(require("./routes"));
+
 app.listen(PORT, () => console.log(` Connected on localhost:${PORT}`));
