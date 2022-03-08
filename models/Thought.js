@@ -11,5 +11,16 @@ const ThoughtSchema = new Schema({
         type: Date,
       default: Date.now,
       get: (createdAtVal) => dateFormat(createdAtVal),
-    }
+    },
+    username:{
+        type: String,
+        required: true
+    },
+    reactions:[
+
+    ],
 })
+
+const Thought = model('Thought', ThoughtSchema);
+
+module.exports = Thought;
